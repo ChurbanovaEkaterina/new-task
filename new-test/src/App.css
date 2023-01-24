@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+body{
+  background-color: rgb(238, 238, 246);
+}
+.main__container{
+  margin: 10px;
+}
+h1 {
+  margin: 10px;
+}
+.searching{
+  margin: 30px;
+}
+.searching :last-child{
+    position: absolute;
+    left: 24vh;
+    padding-top: 7px;
+    color: gray;
+}
+input{
+  border: 1px solid #e2eff6;
+  border-radius: 20px;
+  padding: 10px;
+}
+.container__projects{
+  border: 1px solid #e2eff6;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: white;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.projects{
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  gap: 20px;
+  margin: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.projects__head{
+  background-color: #f7f9fa;
+  border: 1px solid #e2eff6;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  padding: 10px 20px;
+
+}
+.projects__body{
+  border: 1px solid #e2eff6;
+  border-top: none;
+  border-radius: 0 0 12px 12px ;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.address{
+  margin-bottom: 10px;
+}
+.rooms{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.rooms div {
+  background-color: #ebf7fc;
+  color: #4ab7e6;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 5px 10px 5px 0;
+  font-size: 14px;
+  
+}
+.project__info{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.project__info div{
+  margin-right: 6px;
+}
+
+.bold__text{
+  font-weight: 800;
+}
+.grey__text{
+  color: gray;
+  font-size: 14px;
+}
+.date__and__total{
+  padding: 6px 10px 10px 0;
+  margin: 2px;
+}
+/* status */
+.status{
+  border-radius: 16px;
+  padding: 6px 10px;
+  margin: 2px;
+}
+
+.progress{
+  background-color: #f7f9fa;
+  color: black;
+}
+
+.done{
+  background-color: #ebfdec;
+  color: #35d96d;
+}
+.cancelled{
+  background-color: #ebf7fd;
+  color: #3eb3e4;
+  font-weight: 800;
+}
+
+.negotiation{
+  background-color: #faeee7;
+  color: #e4793e;
+}
+@media screen and (max-width: 1200px) {
+  .projects{
+    grid-template-columns: 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 800px) {
+  .projects{
+    grid-template-columns: 1fr;
   }
 }
