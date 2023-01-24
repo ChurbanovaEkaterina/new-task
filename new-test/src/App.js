@@ -10,7 +10,6 @@ function App() {
   useEffect(()=>{
     fetchData()
   },[])
-  const scrinWidth =window.screen.availWidth
 
   const fetchData = async()=>{
     try {
@@ -27,11 +26,7 @@ const numberWithCommas = (x) => {
 };
 const cutName = (nameCust) =>{
   if(nameCust.length>30){
-    if(scrinWidth>420){
-      return nameCust.slice(0,31).concat("...")}
-    else{
-      return nameCust.slice(0,20).concat("...")
-    }
+      return nameCust.slice(0,30).concat("...")
   }else{
     return nameCust
   }
@@ -78,8 +73,6 @@ const searchAdressOrName=(event)=>{
     return fetchData()
   }
 }
-
-
   return (
     <div className='main__container'>
       <h1>Contracts</h1>
