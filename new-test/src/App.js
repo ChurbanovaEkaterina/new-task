@@ -5,10 +5,12 @@ import { useState, useEffect } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 
 function App() {
+
   const [data, setData] = useState([])
   useEffect(()=>{
     fetchData()
   },[])
+  const scrinWidth =window.screen.availWidth
 
   const fetchData = async()=>{
     try {
@@ -25,7 +27,11 @@ const numberWithCommas = (x) => {
 };
 const cutName = (nameCust) =>{
   if(nameCust.length>30){
-    return nameCust.slice(0,31).concat("...")
+    if(scrinWidth>420){
+      return nameCust.slice(0,31).concat("...")}
+    else{
+      return nameCust.slice(0,20).concat("...")
+    }
   }else{
     return nameCust
   }

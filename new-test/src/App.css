@@ -73,6 +73,7 @@ input{
 .project__info{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
 }
 .project__info div{
@@ -123,6 +124,12 @@ input{
 }
 @media screen and (max-width: 800px) {
   .projects{
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
+  }
+  .project__info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
